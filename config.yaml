@@ -1,0 +1,30 @@
+default_category: notes
+schemas:
+  default:
+    default_field: title
+    title:
+      required: true
+    source:
+      required: false
+    notes:
+      required: false
+  quotes:
+    default_field: quote
+    quote:
+      required: true
+    author:
+      required: true
+      default: anonymous
+    source:
+      required: false
+    notes:
+      required: false
+format:
+  default:
+    title: 'Title: $title'
+    source: 'Source: $source'
+    notes: 'Notes: $notes'
+  quotes:
+    quote: '$quote'
+    author: '        - $author'
+    source: '     src: $source'
